@@ -1,0 +1,20 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+        version="2.0">
+    <persistence-unit name="org.hibernate.tutorial.jpa" >
+      
+      <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.format_sql" value="true"/>
+			<property name="javax.persistence.jdbc.driver" value="net.sourceforge.jtds.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:jtds:sqlserver://localhost:1433/trusty-dev"/>
+			<property name="javax.persistence.jdbc.user" value="trusty"/>
+			<property name="javax.persistence.jdbc.password" value="trusty2015"/>
+		</properties>
+      
+    </persistence-unit>
+</persistence>
